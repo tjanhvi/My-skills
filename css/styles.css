@@ -1,0 +1,126 @@
+*{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family:'Baloo Bhai 2', cursive;
+}
+
+body{
+      background-color: #0a0005;
+}
+.inner{
+      padding-top: 20px;
+}
+.header{
+      text-align: center;
+      color: rgb(212, 16, 212);
+      padding:1rem ;
+      position: relative;
+}
+.header:after{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 4px;
+      width: 150px;
+      background-color: #2bc46a;
+      border-radius: 2px;
+}
+
+.container{
+      display: grid;
+      grid-template-columns:repeat(3, 1fr) ;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      grid-gap: 1rem;
+      padding:1rem 80px ;
+      font-size: 1.2rem;
+}
+
+.skill-box{
+      padding: 1rem;
+      color: #ddd;
+      cursor: pointer;
+}
+.skill-box:hover > .skill-title:after, .skill-box:hover > .skill-title:before{
+      width: 35px;
+}
+.skill-box:hover .img{
+      transform: translateY(-10px);
+}
+.skill-title{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0.5rem;
+      margin-bottom: 0.5rem;
+      position: relative;
+      animation :text 3s 1;
+}
+.skill-title:after{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 50%;
+      width: 35%;
+      height: 4px;
+      border-radius:2px 0 0 2px;
+      background-color: #2ecc71;
+      transition: .5s;
+}
+.skill-title:before{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 35%;
+      height: 4px;
+      border-radius:0 2px 2px 0;
+      background-color: #2ecc71;
+      transition: .5s;
+}
+.img{
+      width: 90px;
+      height: 90px;
+      position: relative;
+      border-radius:45px ;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+.img:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 90px;
+    background-color: rgb(100, 100, 100,0.5);
+    border-radius: 45px 0 0 45px;
+    
+}
+.skill-title h3{
+      color: #fff;
+      margin-top: 0.5rem;
+}
+.skill-icon{
+      width: 50px;
+      z-index: index 2;
+}
+
+@media screen and (max-width: 990px){
+      .container{
+            grid-template-columns:repeat(2, 1fr) ;   
+            padding: 2rem 50px;
+      }
+}
+@media screen and (max-width: 650px){
+      .container{
+            grid-template-columns:1fr ;   
+            padding: 2rem 50px;
+      }
+}
